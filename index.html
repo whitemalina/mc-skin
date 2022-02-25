@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>MC-SKIN</title>
+</head>
+<body>
+    <div id="app">
+        <div class="fal">
+            <div  class="container" id="card">
+                <div class="container-inner">
+                    <div  class="bodypic-container">
+                        <img :src="url + '/body/' + nickname" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="container-info">
+                <div class="player">
+                    <img :src="url + '/avatar/' + nickname" height="50" width="50" alt="">
+                    <div class="nickname-info">
+                        <span>PLAYER</span>
+                        <span>{{nicknamebuff}}123</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+
+
+        <div v-if="loader" class="container" id="card">
+            <img src="./src/icon/XOsX.gif" width="400" height="400" alt="">
+        </div>
+        <div class="container search-container">
+            <div class="search-fill">
+                <input type="text" v-model="nickname" placeholder="Nickname">
+                <button @click="getData()" class="btn search">
+                    Search
+                    <span>🚀</span>
+                </button>
+            </div>
+        </div>    
+    </div>
+    
+
+
+    <script src="./src/js/vue.js"></script>
+    <script src="./src/js/main.js"></script>
+</body>
+</html>
